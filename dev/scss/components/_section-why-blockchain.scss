@@ -1,0 +1,79 @@
+.section-why-blockchain {
+	padding-top: 64px;
+	padding-bottom: 66px;
+
+	@include media('≥phone') {
+		padding-bottom: 0;
+	}
+
+	@include media('≥tablet') {
+		padding-top: 96px;
+	}
+
+	h3.title {
+		font-size: 18px;
+		margin-bottom: 40px;
+	}
+}
+
+.blockchain-list {
+	@extend %listreset;
+	
+	li {
+		+ li {
+			margin-top: 32px;
+
+			@include media('≥tablet') {
+				margin-top: 66px;
+			}
+		}
+	}
+}
+
+.blockchain-block {
+	display: flex;
+
+	.img-block {
+		margin-right: 66px;
+		max-width: 56px;
+		flex: 0 0 56px;
+		margin-right: 16px;
+
+		@include media('≥tablet') {
+			max-width: 84px;
+			flex: 0 0 84px;
+			margin-right: 66px;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.text-block {
+		color: $black;
+		font-family: $font-roboto;
+		font-size: 14px;
+
+		@include media('≥tablet') {
+			font-size: 16px;
+		}
+
+		.title {
+			display: block;
+			font-family: $font-rubik;
+			font-size: 24px;
+			line-height: 1;
+			margin-bottom: 16px;
+
+			@include media('≥tablet') {
+				font-size: 30px;
+			}
+		}
+
+		p {
+			margin: 0;
+		}
+	}
+}

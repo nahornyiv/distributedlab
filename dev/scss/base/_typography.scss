@@ -25,6 +25,67 @@ h6,
   }
 }
 
+h1,
+.h1 {
+  font-size: 30px;
+  margin-bottom: 40px;
+
+  @include media('≥640px') {
+    font-size: 50px;
+  }
+
+  @include media('≥tablet') {
+    margin-bottom: 48px;
+    font-size: 63px;
+  }
+}
+
+h3,
+.h3 {
+  font-family: $font-roboto;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 24px;
+
+  @include media('≥tablet') {
+    margin-bottom: 32px;
+    line-height: 1;
+  }
+
+  &.white {
+    color: $white;
+    font-size: 18px;
+    margin-bottom: 44px;
+
+    @include media('≥phone') {
+      margin-bottom: 50px;
+    }
+
+    @include media('≥tablet') {
+      margin-bottom: 90px;
+    }
+
+    &:before {
+      background-color: $white;
+    }
+  }
+
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: '';
+    width: 56px;
+    height: 2px;
+    background: #29339F;
+    margin-right: 16px;
+    margin-bottom: 2px;
+
+    @include media('≥tablet') {
+      width: 64px;
+    }
+  }
+}
+
 p {
   margin: 0 0 20px;
 }

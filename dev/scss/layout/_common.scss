@@ -1,12 +1,41 @@
 #wrapper {
+  position: relative;
   width: 100%;
   overflow: hidden;
-  background: $base-background-color;
+  // background: $base-background-color;
+
+
+}
+
+#main {
+    position: relative;
+
+    &:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    content: '';
+    width: 50%;
+    z-index: -1;
+    background: rgba(232, 232, 232, 0.5);
+  }
+
+  > * {
+    z-index: 1;
+  }
 }
 
 .container {
   @extend %clearfix;
+
   max-width: $max-width-center-container;
   padding: $padding-container;
   margin: 0 auto;
+}
+
+mark {
+  background-color: $black;
+  color: $white;
+  padding: 4px;
 }

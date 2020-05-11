@@ -1,3 +1,52 @@
+.mm-menu {
+  width: 100%;
+  background-color: #020202;
+
+  &.mm-offcanvas {
+    z-index: 9;
+  }
+}
+
+html {
+  &.mm-right {
+    &.mm-opening { 
+      .mm-slideout {
+        transform: translate3d(-100%,0,0);
+      }
+    }
+  }
+
+  &.mm-opening.financity-mmenu-right .financity-mobile-header {
+    transform: translate3d(-100%,0,0);
+  }
+}
+
+.mm-navbar .mm-title, .mm-navbar .mm-btn, ul.mm-listview li > a, ul.mm-listview li > span {
+  color: $white;
+}
+
+ul.mm-listview li {
+  border: none;
+}
+
+.financity-header-background, .financity-sticky-menu-placeholder, .financity-header-style-boxed.financity-fixed-navigation {
+  background-color: #020202;
+}
+
+ul.mm-listview li {
+  text-align: center;
+}
+
+.mm-arrow:after, .mm-next:after {
+    border-width: 2px;
+    width: 13px;
+    height: 13px;
+}
+
+.mm-arrow:after, .mm-next:after, .mm-prev:before {
+  border-color: #ffffff;
+}
+
 #header {
   position: relative;
   background: $gray;
@@ -163,4 +212,9 @@
 .resize-active .nav-drop,
 .resize-active .nav-drop > ul {
   transition:none !important;
+}
+
+
+.financity-header-background-transparent {
+  z-index: 2 !important;
 }

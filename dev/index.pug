@@ -1,47 +1,321 @@
 include pug/common/_head
 	block content
-		include pug/common/_header
+		//- include pug/common/_header
 		main#main(role="main")
 			// section banner template
-			section.section-banner(style="background-image: url(images/img-150x150.jpg)")
+			section.main-banner(style="background-image: url('images/banner-img.jpg'); background-color: #000;")
 				.container
-					.banner-text
-						h1.title Text h1
-						p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, odit saepe ipsam corrupti delectus autem labore dolorum ratione sit rem libero pariatur tenetur consequatur ipsa inventore? Corrupti quod reiciendis sapiente!
-						.btn-wrap
-							a.btn.btn-default(href="#") Link
-							a.btn.btn-primary(href="#") Link
-			section.section-cards
+					.dots-wrap
+						span.pagingInfo
+						.dots-holder
+					.main-slider.j-main-slider
+						.item
+							.banner-text
+								h1.title Dustributed lab
+								.text
+									p Blockchain Ecosystem Solutions for <br> overnment and Business
+						.item
+							.banner-text
+								h1.title Dustributed lab
+								.text
+									p Blockchain Ecosystem Solutions for <br> overnment and Business
+			.block-blockquote
+				.container
+					blockquote
+						.text-side
+							.inner
+								.content
+									p "The adoption of this technology will reflect on the quality of life in the UAE and will enhance happiness levels for citizens."
+								footer
+									span  Н.Н. Sheikh, 
+										strong Mohammed bin Rashid Al Maktoum
+									cite Vice President and Prime Minister of the United Arab Emirates
+						.img-side
+							img(src="images/blockquote-img-01.jpg", width="365", height="505", alt="image description")
+			section.section-distributed-lab-is
 				.container
 					.df-row
-						.col-ph-6.col-sm-4.col-md-3
-							+card({
-								imageName: 'img-150x150.jpg',
-								title: 'Lorem',
-								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
-								link: 'More'
-							})
-						.col-ph-6.col-sm-4.col-md-3 
-							+card({
-								imageName: 'img-150x150.jpg',
-								title: 'Lorem',
-								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
-								link: 'More'
-							})
-						.col-ph-6.col-sm-4.col-md-3 
-							+card({
-								imageName: 'img-150x150.jpg',
-								title: 'Lorem',
-								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
-								link: 'More'
-							})
-						.col-ph-6.col-sm-4.col-md-3 
-							+card({
-								imageName: 'img-150x150.jpg',
-								title: 'Lorem',
-								text: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem laudantium blanditiis voluptatibus soluta sed fugiat quisquam cumque neque vel, facilis enim in amet quibusdam est non culpa delectus alias illum.',
-								link: 'More'
-							})
-			form
-				input(type="text")
+						.col-ph-6
+							.block-img
+								.img(style="background-image: url('images/glass-bg.jpg');")
+								strong.title
+									span SEE THE FUTURE, CREATE 
+									mark IT
+						.col-ph-6
+							.text-block
+								h2.title  Distributed Lab is a blockchain expertise center 
+								.text
+									p Our team consists of researchers, computer engineers and consultants with over 5 years of practical experience in the blockchain space. We consult enterprises and businesses with the aim to automate their internal processes and get rid of paperwork as well as to properly digitize their interaction with customers.
+								.markered-text-block
+									p <mark>The UAE</mark>  is a flagship for blockchain technology implementation. We have real-life experience to make that happen.
+			aside.aside-ancor
+				.container
+					.inner
+						.aside-first
+						.aside-second
+							a(href="#section-from") 
+								sapn Connect with our experts
+								i.icon-arrow-down
+			section.services-section(style="background-image: url('images/services-bg.png'); background-color: #fff;")
+				.container
+					.inner
+						.df-row
+							.col-md-6
+								.descr-block
+									h3.title Blockchain Solutions
+									ul
+										li
+											span Digital Identity
+										li
+											span E-Money Systems
+										li
+											span Critical Data Protection
+										li
+											span Asset Ownership Tokenization
+							.col-md-6
+								.descr-block
+									h3.title Services
+									ul
+										li
+											span Consulting services
+										li
+											span Analysis and audit of business processes
+										li
+											span Optimizing work processes
+										li
+											span IT products development
+			section.section-industries(style="background-image: url('images/industries-bg.jpg'); background-color: #fff;")
+				.container
+					.inner
+						h3.white.title Industries
+						.industries-list-holder
+							ul.industries-list
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-01.svg", alt="Government")
+										strong.title Government
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-02.svg", alt="Fintech")
+										strong.title Fintech
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-03.svg", alt="Healthcare")
+										strong.title Healthcare
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-04.svg", alt="Legal tech")
+										strong.title Legal tech
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-05.svg", alt="Insurance")
+										strong.title Insurance
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-06.svg", alt="Logistics")
+										strong.title Logistics
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-07.svg", alt="Retail")
+										strong.title Retail
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-08.svg", alt="Real Estate")
+										strong.title Real Estate
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-09.svg", alt="Smart Cities")
+										strong.title Smart Cities
+								li
+									.industries-block
+										.img-block
+											img(src="images/industries-icon-10.svg", alt=" Oil and Gas")
+										strong.title  Oil and Gas
+			aside.aside-ancor
+				.container
+					.inner
+						.aside-first
+						.aside-second
+							a(href="#our-research") 
+								sapn Our Research
+								i.icon-arrow-down
+			section.section-why-blockchain
+				.container
+					.inner
+						.df-row
+							.col-ph-6
+								h3.title Why Blockchain
+							.col-ph-6
+									ul.blockchain-list
+										li
+											.blockchain-block
+												.img-block
+													img(src="images/blockchain-img-01.svg" alt="image description")
+												.text-block
+													strong.title Integr
+													p Digital data is protected by cryptography and cannot be changed
+										li
+											div.blockchain-block
+												.img-block
+													img(src="images/blockchain-img-02.svg" alt="image description")
+												.text-block
+													strong.title Authenticity
+													p You know the initiator of each data log in the system
+										li
+											.blockchain-block
+												.img-block
+													img(src="images/blockchain-img-03.svg" alt="image description")
+												.text-block
+													strong.title Transparency
+													p Ability to verify and audit all events in real-time							
+			.block-blockquote
+				.container
+					blockquote
+						.text-side
+							.inner
+								.content
+									p "Blockchain is one of the most transformative technologies which presents a huge opportunity for the government to accelerate our digital journey towards meeting the needs of citizens, residents, and businesses."
+								footer
+									span  H.E. 
+										strong Dr Rawda Saeed Al Saadi 
+									cite Director General of Smart Solutions & Services Authority
+						.img-side
+							img(src="images/blockquote-img-02.jpg", width="365", height="505", alt="image description")
+			section.section-why-us
+				.container
+					.df-row
+						.col-sm-6
+							h3.title Why Us
+						.col-sm-6
+							.text
+								p We are inspired by the UAE Government growth mindset approach, especially by its primary aim: enhancing citizen’s happiness through the correct implementation of technology.
+								p Over the last 5 years, we’ve analyzed over 500 projects, assisted in and built a wide variety of solutions, from a digital bank in Germany and a pilot CBDC system for the National Bank of Ukraine to a blockchain-based voting system for a democratic political party.
+								p  Since then we have already paved our way to create a technology that makes blockchain simple for regular people while offering new benefits for the government and enterprises (data integrity, authenticity, transparency, etc.). We aim to contribute to the implementation of the Emirates Blockchain 2021 and The Dubai Blockchain Strategies by using our expertise and best technological practices.
+				aside.aside-ancor
+					.container
+						.inner
+							.aside-first
+							.aside-second
+								a(href="#our-partners") 
+									sapn Our Partners
+									i.icon-arrow-down
+			section.section-why-us.section-our-research#our-research
+				.container
+					.df-row
+						.col-sm-6
+							h3.title Our Research
+						.col-sm-6
+							.text
+								p At the present time, people are under threat of being controlled by major centralized digital systems. Decentralization is an alternative solver of a variety of humanity’s challenges, in particular ensuring the freedom of access to public data and the transparency of accounting processes. The study gives an insight into the capabilities of blockchain technology, principles of operation of decentralized accounting systems as well as features of reaching consensus in a decentralized environment
+				.books-block-holder
+					.container
+						ul.list-books
+							li
+								.books-block
+									.img-block(style="background-image: url('images/book-bg.png');")
+										a(href="#" target="blank_")
+											img(src="images/book-img-01.jpg", alt="Blockchain and decentralized system volume 1")
+									.text-block
+										a(href="#" target="blank_")
+											strong Blockchain and <br> decentralized system
+											span volume 1
+							li
+								.books-block
+									.img-block(style="background-image: url('images/book-bg.png');")
+										a(href="#" target="blank_")
+											img(src="images/book-img-02.jpg", alt="Blockchain and decentralized system volume 2")
+									.text-block
+										a(href="#" target="blank_")
+											strong Blockchain and <br> decentralized system
+											span volume 2
+							li
+								.books-block
+									.img-block(style="background-image: url('images/book-bg.png');")
+										a(href="#" target="blank_")
+											img(src="images/book-img-03.jpg", alt="Blockchain and decentralized system volume 2")
+									.text-block
+										a(href="#" target="blank_")
+											strong Blockchain and <br> decentralized system
+											span volume 3
+						a(href="#").read-more 
+							span More about books
+					.btn-block
+						.container
+							.btn-wrap
+								a(href="#").btn.btn-primary-outline Buy the books
+								a(href="#").btn.btn-primary-outline Free for students
+								a(href="#").btn.btn-primary-outline Free for corporate
+			section.section-our-partners#our-partners
+				.container
+					h2.title Our Partners
+					.partner-block-list
+						ul.partner-list
+							li
+								.partner-block
+									a(href="#" target="blank")
+										img(src="images/partner-img-01.png", width="144", height="108", alt="secure engineering")
+							li
+								.partner-block
+									a(href="#" target="blank")
+										img(src="images/partner-img-02.png", width="144", height="108", alt="innohub")
+							li
+								.partner-block
+									a(href="#" target="blank")
+										img(src="images/partner-img-03.png", width="144", height="108", alt="bin zayed group")
+							li
+								.partner-block
+									a(href="#" target="blank")
+										img(src="images/partner-img-04.png", width="144", height="108", alt="A")
+							li
+								.partner-block
+									a(href="#" target="blank")
+										img(src="images/partner-img-05.png", width="144", height="108", alt="ctrack intelligent tracking")
+			section.section-form#section-form(style="background-color: #000; background-image: url('images/contact-bg.png')")
+				.container
+					h2.title Contacts
+					.df-row
+						.col-ph-6
+							.form-holder
+								.form-text
+									p Please, fill out a short form below and we will get in touch with you right away.
+								form(action="/partners-name#wpcf7-f7304-o1" method="post" class="wpcf7-form" novalidate="novalidate")
+									p
+										label
+											span(class="wpcf7-form-control-wrap your-name")
+												input(type="text" name="your-name" placeholder="Name *" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false")
+										label
+											span(class="wpcf7-form-control-wrap your-email")
+												input(type="email" name="your-email" placeholder="Email *" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false")
+										label
+											span(class="wpcf7-form-control-wrap your-message")
+												textarea(name="your-message"  placeholder="Message *" class="wpcf7-form-control wpcf7-textarea" )
+										input(type="submit" value="Contacts us" class="wpcf7-form-control wpcf7-submit btn btn-primary")
+						.col-ph-6
+							.contact-block
+								strong.title Please feel free to contact us:
+								ul.contact-list
+									li
+										strong.contact-name Phone:
+										.contact-info
+											a(href="tell:380549979024") +380 54 997 90 24
+									li
+										strong.contact-name E-mail:
+										.contact-info
+											a(href="mailto:gcc@distributedlab.com") gcc@distributedlab.com
+									li
+										strong.contact-name Address:
+										.contact-info
+												address
+													p Innohub | B-Block P1 | AL Lulu Tower Khalifa Street 2102 Abu Dhabi | United Arab Emirates
+					.block-map
+						img(src="images/map-img.jpg", alt="")
 		include pug/common/_footer

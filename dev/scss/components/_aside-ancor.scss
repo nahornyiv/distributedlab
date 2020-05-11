@@ -1,0 +1,67 @@
+.aside-ancor {
+	position: relative;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1.3;
+	z-index: 1;
+
+	.inner {
+		display: flex;
+		align-items: center;
+	}
+
+	.aside-first,
+	.aside-second {
+		flex: 0 0 50%;
+		max-width: 50%;
+		padding: 16px 0;
+	}
+
+	.aside-first {
+		text-align: left;
+	}
+
+	.aside-second {
+		text-align: right;
+	}
+
+	a {
+		@include animate(opacity);
+
+		color: $white;
+		font-family: $font-roboto;
+		text-decoration: none;
+		vertical-align: middle;
+
+		&:hover {
+			opacity: .8;
+		}
+
+		i {
+			font-size: 9px;
+			margin-left: 8px;
+			vertical-align: middle;
+		}
+	}
+
+
+	&:after ,
+	&:before {
+		content: " ";
+		position: absolute;
+		width: 50%;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+
+	&:after {
+		right: 0;
+		background: #29339F;
+	}
+
+	&:before {
+		left: 0;
+		background: #1B1B1B;
+	}
+}

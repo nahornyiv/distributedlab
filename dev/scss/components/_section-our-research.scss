@@ -1,0 +1,116 @@
+.section-our-research {
+	padding-bottom: 0;
+
+	.list-books {
+		@extend %listreset;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -32px 0 -32px;
+
+		li {
+			padding: 0 32px 62px 32px;
+			max-width: 100%;
+			flex: 0 0 100%;	
+
+			@include media('≥phone') {
+				max-width: 50%;
+				flex: 0 0 50%;	
+			}
+
+			@include media('≥tablet') {
+				max-width: 33.3333333%;
+				flex: 33.3333333%;
+			}
+
+			@include media('≥desktop') {
+				padding: 0 32px 62px 32px;
+			}
+		}
+	}
+}
+
+.books-block-holder {
+	padding: 32px 0 50px 0;
+	background-color: $white;
+	text-align: center;
+	font-family: $font-roboto;
+
+	.read-more {
+		@include animate(opacity);
+
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 1;
+		color: #29339F;
+
+		&:hover {
+			opacity: .8;
+		}
+
+		// &:after {
+	 //    display: inline-block;
+	 //    vertical-align: middle;
+	 //    content: '';
+	 //    width: 10px;
+	 //    height: 10px;
+	 //    border-left: 2px solid #29339F;
+	 //    border-bottom: 2px solid #29339F;
+	 //    transform: rotate(-45deg);
+	 //    margin-left: 11px;
+	 //    margin-bottom: 6px;
+		// }
+	}
+
+	.btn-block {
+		max-width: 272px;
+		padding-top: 48px;
+		margin-left: auto;
+		margin-right: auto;
+
+		@include media('≥desktop') {
+			max-width: 100%;
+		}
+
+		.btn-wrap {
+			display: block;
+
+			@include media('≥desktop') {
+				display: flex;
+			}
+		}
+	}
+}
+
+.books-block {
+
+	.img-block {
+    padding: 28px;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.text-block {
+		strong {
+			display: block;
+			font-size: 16px;
+			line-height: 1.5;
+			color: #191919;
+			font-weight: 500;
+		}
+
+		span {
+			color: #4F4F4F;
+			font-size: 12px;
+			line-height: 2;
+		}
+	}
+}

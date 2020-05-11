@@ -14,7 +14,7 @@ Theme URI:
 // devices viewport width starts at:
 $breakpoints: (
   xs-phone: 320px,
-  phone: 480px,
+  phone: 576px,
   tablet: 768px,
   desktop: 1024px,
   widescreen: 1300px
@@ -34,6 +34,8 @@ $media-expressions: (
 // ligatured operators ≥ ≤
 
 @import 'vendors/include-media';
+@import 'vendors/slick';
+@import 'vendors/fonts';
 // @import 'vendors/gravity-defoult/browsers.min';
 // @import 'vendors/gravity-defoult/formreset.min';
 // @import 'vendors/gravity-defoult/formsmain.min';
@@ -50,11 +52,17 @@ $media-expressions: (
 @import 'base/typography';
 
 @import 'components/buttons';
-// @import 'components/section-banner';
-// @import 'components/section-cards';
-// @import 'components/custom-radio-checkbox';
-// @import 'components/custom-select';
-// @import 'components/gravity-form-custom';
+@import 'components/section-banner';
+@import 'components/block-blockquote';
+@import 'components/aside-ancor';
+@import 'components/services-section';
+@import 'components/section-industries';
+@import 'components/section-why-blockchain';
+@import 'components/section-why-us';
+@import 'components/section-our-research';
+@import 'components/section-our-partners';
+@import 'components/section-distributed-lab-is';
+@import 'components/section-form';
 
 @import 'layout/header';
 @import 'layout/common';

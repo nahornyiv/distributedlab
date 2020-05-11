@@ -1,12 +1,13 @@
 .btn {
   @include animate(background color);
   
-  display: inline-block;
-  vertical-align: top;
+  display: block;
   border: $btn-border;
   padding: $btn-padding;
   font-size: $btn-font-size;
   line-height: $btn-line-height;
+  font-family: $font-roboto;
+  font-weight: 700;
 
   &.btn-default {
     @include button-color($btn-background, $btn-color, $btn-border-color, $btn-hover-background, $btn-hover-color);
@@ -14,6 +15,10 @@
 
   &.btn-primary {
     @include button-color($btn-background-primary, $btn-color-primary, $btn-border-color-primary, $btn-hover-background-primary, $btn-hover-color-primary);
+
+    &-outline {
+       @include button-color($btn-background-primary-outline, $btn-color-primary-outline, $btn-border-color-primary-outline, $btn-hover-background-primary-outline, $btn-hover-color-primary-outline);      
+    }
   }
 }
 
@@ -32,11 +37,17 @@
   flex-wrap: wrap;
 
   .btn {
-    margin: 0 0 10px;
-    max-width: 50%;
+    margin: 0 0 15px;
+
+    @include media('≥desktop') {
+      max-width: calc(33.33333333% - 15px);
+      flex: 0 0 calc(33.33333333% - 15px);
+    }
 
     +.btn {
-      margin-left: 20px;
+      @include media('≥desktop') {
+        margin-left: 15px;
+      }
     }
   }
 }

@@ -1,0 +1,135 @@
+.section-form {
+	padding-top: 86px;
+	padding-bottom: 96px;
+	color: #E0E0E0;
+	background-position: bottom;
+	background-repeat-y: no-repeat;
+	background-size: contain;
+
+	a {
+		color: inherit;
+	}
+
+	h2 {	
+		margin-top: 0;
+		margin-bottom: 25px;
+		font-size: 24px;
+		line-height: 1.2;
+		color: $white;
+		font-family: $font-montserrat;
+
+		@include media('≥phone') {
+			font-size: 36px;
+			margin-bottom: 18px;
+		}
+
+		@include media('≥tablet') {
+			margin-bottom: 57px;
+		}
+	}
+
+	.form-text {
+		font-size: 16px;
+		line-height: 1.5;
+		margin-bottom: 15px;
+		font-family: $font-open-sans;
+		max-width: 384px;
+
+		p {
+			margin: 0;
+		}
+	}
+
+	label {
+		display: block;
+		margin-bottom: 25px;
+
+		input ,
+		textarea {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid #EEEEEE;
+			font-family: $font-rubik;
+			font-size: 16px;
+			line-height: 1.4;
+			background: transparent;
+			padding: 5px 0;
+			height: 30px;
+			color: #4F4F4F;
+
+			@include placeholder {
+		    color: #4F4F4F;
+      }
+
+			&:focus {
+				border-bottom: 1px solid #EEEEEE;
+			}
+
+		}
+
+		textarea {
+			resize: none;
+    	overflow: hidden;
+		}
+	}
+
+	.btn {
+		display: inline-block;
+		margin-top: 40px;
+		min-width: 307px;
+	}
+
+	.contact-block {
+		.title {
+			display: block;
+			font-family: $font-open-sans;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 24px;
+			line-height: 1;
+			margin-bottom: 46px;
+		}
+
+		ul {
+			@extend %listreset;
+
+    	max-width: 375px;
+    	font-family: $font-open-sans;
+
+			li {
+				display: flex;
+				font-size: 16px;
+
+				+ li {
+					margin-top: 24px;
+				}
+
+
+				strong {
+					display: block;
+					max-width: 80px;
+					flex: 0 0 80px;
+					color: $white;
+
+				}
+
+				a,
+				address {
+					color: #E0E0E0;
+					font-style: normal;
+					line-height: 1.4;
+				}
+			}
+		}
+	}
+
+	.block-map {
+		text-align: center;
+		padding-top: 80px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
